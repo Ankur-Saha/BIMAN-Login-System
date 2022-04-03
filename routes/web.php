@@ -18,6 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    dd(\Illuminate\Support\Facades\Auth::user());
-    return view('login');
+    return view(view: 'home');
 })->middleware(['auth', 'verified']);
