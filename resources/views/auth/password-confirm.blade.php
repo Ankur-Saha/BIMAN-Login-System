@@ -17,7 +17,7 @@
                     <div class="brand-wrapper">
                         <img src="/img/logo.svg" alt="logo" class="logo">
                     </div>
-                    <p class="login-card-description">Sign into your account</p>
+                    <p class="login-card-description">Confirm your password to continue.</p>
                     <form method="POST" action="{{ url('user/confirm-password') }}">
                         @csrf
                         <div class="form-group mb-4">
