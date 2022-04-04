@@ -27,13 +27,10 @@
                     @if (session('status') == 'two-factor-authentication-enabled')
                     <p>
                         You have now enabled 2fa, please scan the following QR code
-                        into your phones authenticator application.
+                        into your phones authenticator application.<br><br>
                         {!! auth()->user()->twoFactorQrCodeSvg() !!}
 
-                    <p>Please store these recovery codes in a secure location.
-                        @foreach (json_decode(decrypt(auth()->user()->two_factor_recovery_codes, true)) as $code)
-                        {{ trim($code) }} <br>
-                        @endforeach
+
                         @endif
                 </div>
             </div>
