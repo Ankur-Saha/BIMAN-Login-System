@@ -22,9 +22,9 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="email" class="sr-only">Email</label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address">
-                            @error('email')
+                            <label for="serial" class="sr-only">ID</label>
+                            <input id="serial" type="number" class="form-control @error('serial') is-invalid @enderror" name="serial" value="{{ old('serial') }}" required autocomplete="serial" placeholder="Identification number">
+                            @error('serial')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
