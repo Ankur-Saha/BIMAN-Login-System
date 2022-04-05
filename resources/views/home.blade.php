@@ -1,6 +1,21 @@
 @extends ('template')
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Biman Bangladesh Airlines</a>
+        <div class="me-0" id="navbarSupportedContent">
+            <button class="btn btn-primary">
+                <a class="text-light" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+            </button>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+            </form>
+        </div>
+    </div>
+</nav>
 @section ('content')
+
 <div class="container">
     <div class="card login-card">
         <div class="row no-gutters">
