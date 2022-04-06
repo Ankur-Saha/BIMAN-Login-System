@@ -3,7 +3,7 @@
     <div class="container">
         <a class="navbar-brand" href="#">Biman Bangladesh Airlines</a>
         <div class="me-0" id="navbarSupportedContent">
-            <button class="btn btn-primary">
+            <button name="logout" id="logout" class="btn btn-primary" type="submit" value="Logout">
                 <a class="text-light" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Logout
                 </a>
@@ -44,8 +44,6 @@
                         You have now enabled 2fa, please scan the following QR code
                         into your phones authenticator application.<br><br>
                         {!! auth()->user()->twoFactorQrCodeSvg() !!}
-
-
                         @endif
                 </div>
             </div>
